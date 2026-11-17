@@ -1,65 +1,225 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog da maddy</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    
-    <h1 class="titulo-centralizado">Angela🐱</h1>
- <nav>
-  <ul>
-    <li><a href="#inicio">Início</a></li>
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#fotos">Fotos</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-</nav>
-    <div class="container">
-      <div class="post">
-        <img src="./misscat.jpg" alt="" />
-        <h1>Miss Angela</h1>
+<html lang="pt-BR">
 
-        <p>
-          Conheça nossa MISS CAT, ela é puro encanto. Com seu olhar doce e seus
-          passos silenciosos.Dona de uma personalidade única. É impossível não
-          se apaixonar poe ela que é cheio de charme.
-        </p>
-      </div>
-      <div class="post">
-        <img src="./bento.jpeg" alt="" />
-        <h1>Best da Angela</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <p>
-          Bento, um bebê cheio de charme e sorrisos encantadores. Mesmo pequeno,
-          já conquista todos com seu jeitinho doce.
-        </p>
-      </div>
-      <div class="post">
-        <img src="./ange.jpeg" alt="" />
-        <h1>Angela antes da fama</h1>
+    <meta name="description"
+        content="Pequenas Memórias: um diário de infância cheio de carinho e descobertas.">
 
-        <p>
-          O tempo em que Anegela era humilde... Dormia na caixa de papelão como
-          se fosse um trono, aceitava qualquer ração . Não exigia travesseiro
-          macio. Bastava um pano velho no sol e ela já se sentia rainha.
-        </p>
-      </div>
-    </div>
-    <div class="Historias" #ffe4e1; padding: 20px>
-      <h2>Historias de Angela</h2>
-      <p>
-        Ângela chegou na minha vida como um presente inesperado. Desde o
-        primeiro momento, seu olhar curioso e sua pelagem macia conquistaram meu
-        coração. Ela é aquela companheira silenciosa que está sempre por perto,
-        trazendo alegria e conforto nos dias mais comuns. Com seu jeito
-        carinhoso e brincalhão, Ângela transforma qualquer momento em uma
-        lembrança especial. Cada dia ao lado dela é uma nova aventura cheia de
-        amor e carinho.
-      </p>
-    </div>
-    <footer>Blog da Maddy <span class="paws">🐾🐾🐾</span></footer>
-  </body>
+    <title>Pequenas Memórias | Bento 🧸</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header id="inicio">
+
+        <div class="logo">
+            <span class="ursinho">🧸</span>
+
+            <h1>Pequenas Memórias</h1>
+
+            <p>Um mundo de descobertas e carinho</p>
+
+            <div class="detalhe-cabecalho">
+                ✦ ───────── ♡ ───────── ✦
+            </div>
+        </div>
+
+        <!-- MENU -->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#memorias">Memórias</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section class="apresentacao">
+
+            <div class="apresentacao-texto">
+
+                <span class="etiqueta">♡ Um cantinho especial ♡</span>
+
+                <h2>Olá, eu sou o <span>Bento!</span></h2>
+
+                <p>
+                    Seja bem-vindo ao meu pequeno mundo!
+                    Aqui guardamos fotografias, histórias,
+                    descobertas e momentos que merecem
+                    ser lembrados para sempre.
+                </p>
+
+                <a href="#memorias" class="botao">
+                    Conheça minhas memórias ♡
+                </a>
+
+            </div>
+
+            <div class="foto-principal">
+
+                <span class="estrela estrela-1">✦</span>
+
+                <img src="bento.jpeg" alt="Fotografia do Bento">
+
+                <span class="legenda-foto">
+                    Um pedacinho de felicidade ♡
+                </span>
+
+                <span class="estrela estrela-2">✧</span>
+
+            </div>
+
+        </section>
+
+        <!-- SOBRE MIM -->
+        <section class="sobre" id="sobre">
+
+            <div class="titulo-secao">
+
+                <span>♡ Um pouquinho sobre mim ♡</span>
+
+                <h2>Pequeno no tamanho, gigante nas descobertas!</h2>
+
+            </div>
+
+            <p>
+                Cada dia traz uma novidade, uma brincadeira,
+                um sorriso e uma nova descoberta.
+                Este espaço foi criado para guardar um pouquinho
+                de cada fase e registrar as lembranças
+                que tornam a infância tão especial.
+            </p>
+
+            <span class="decoracao-urso">🧸</span>
+
+        </section>
+
+        <!-- MEMÓRIAS -->
+        <section class="memorias" id="memorias">
+
+            <div class="titulo-secao">
+
+                <span>♡ Meu diário ♡</span>
+
+                <h2>Um mundo de pequenas memórias</h2>
+
+                <p>
+                    Cada lembrança tem uma história especial.
+                </p>
+
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <div class="card-icone">📸</div>
+
+                    <h3>Momentos especiais</h3>
+
+                    <p>
+                        Fotografias e lembranças
+                        dos momentos mais queridos.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <div class="card-icone">⭐</div>
+
+                    <h3>Minhas descobertas</h3>
+
+                    <p>
+                        Novidades, aprendizados e
+                        pequenas conquistas.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <div class="card-icone">🧸</div>
+
+                    <h3>Com muito carinho</h3>
+
+                    <p>
+                        Histórias, mensagens e
+                        recordações da família.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- GALERIA -->
+        <section class="galeria" id="galeria">
+
+            <div class="titulo-secao">
+
+                <span>♡ Álbum de recordações ♡</span>
+
+                <h2>Minhas fotografias</h2>
+
+                <p>
+                    Um registro de momentos que merecem
+                    ficar guardados.
+                </p>
+
+            </div>
+
+            <div class="galeria-destaque">
+
+                <img src="bento.jpeg" alt="Bento em um momento especial">
+
+                <p>Uma lembrança cheia de carinho ♡</p>
+
+            </div>
+
+        </section>
+
+        <!-- MENSAGEM FINAL -->
+        <section class="mensagem">
+
+            <span>🧸</span>
+
+            <h2>As melhores lembranças começam nos pequenos momentos.</h2>
+
+            <p>
+                Que nunca faltem motivos para sorrir,
+                descobrir e criar novas histórias!
+            </p>
+
+            <div class="detalhe-final">
+                ✦ ♡ ✦
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>🧸 Pequenas Memórias</p>
+
+        <span>Feito com carinho para guardar boas lembranças.</span>
+
+    </footer>
+
+</body>
 </html>
