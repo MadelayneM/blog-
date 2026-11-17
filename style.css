@@ -495,3 +495,257 @@ footer span {
         font-size: 29px;
     }
 }
+
+/* ÁLBUM DE MOMENTOS ESPECIAIS */
+
+.galeria .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+
+.galeria .card {
+    background-color: #fffdf8;
+    padding: 15px 15px 22px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(23, 45, 77, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria .card:hover {
+    transform: translateY(-6px) rotate(-1deg);
+    box-shadow: 0 10px 22px rgba(23, 45, 77, 0.16);
+}
+
+.galeria .card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+    cursor: pointer;
+}
+
+.galeria .card h3 {
+    color: #172D4D;
+    margin: 18px 0 8px;
+    font-family: Georgia, serif;
+}
+
+.galeria .card p {
+    color: #42658B;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* AJUSTE PARA CELULAR */
+
+@media (max-width: 700px) {
+    .galeria .cards {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+    }
+}
+
+
+/* FOTOGRAFIA AMPLIADA */
+
+.galeria .card img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.galeria .card img:hover {
+    transform: scale(1.03);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 20, 35, 0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.lightbox.ativo {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+.fechar-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: #F6F0E5;
+    color: #172D4D;
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* SETAS DO ÁLBUM */
+
+.seta-lightbox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #F6F0E5;
+    color: #172D4D;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.seta-lightbox:hover {
+    background-color: #B8D0E5;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.seta-lightbox.anterior {
+    left: 25px;
+}
+
+.seta-lightbox.proximo {
+    right: 25px;
+}
+
+/* CONTADOR DE FOTOGRAFIAS */
+
+.contador-lightbox {
+    position: absolute;
+    bottom: 20px;
+    color: #F6F0E5;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* AJUSTE PARA CELULARES */
+
+@media (max-width: 600px) {
+    .seta-lightbox {
+        width: 38px;
+        height: 38px;
+        font-size: 17px;
+    }
+
+    .seta-lightbox.anterior {
+        left: 8px;
+    }
+
+    .seta-lightbox.proximo {
+        right: 8px;
+    }
+
+    .lightbox img {
+        max-width: 78%;
+    }
+}
+
+/* FILTROS DO ÁLBUM */
+
+.filtros-album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 35px auto;
+    padding: 0 15px;
+}
+
+.filtro-btn {
+    background-color: #F6F0E5;
+    color: #172D4D;
+    border: 1px solid #B8D0E5;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.filtro-btn:hover {
+    background-color: #B8D0E5;
+    transform: translateY(-2px);
+}
+
+.filtro-btn.ativo {
+    background-color: #172D4D;
+    color: #F6F0E5;
+    border-color: #172D4D;
+}
+
+@media (max-width: 600px) {
+    .filtros-album {
+        gap: 8px;
+    }
+
+    .filtro-btn {
+        padding: 9px 14px;
+        font-size: 13px;
+    }
+}
+
+/* =====================================
+   GALERIA DE VÍDEOS
+===================================== */
+
+.videos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.videos-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.video-card {
+    background-color: #fffdf8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(23, 45, 77, 0.12);
+}
+
+.video-card video {
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+}
+
+.video-card h3 {
+    color: #172D4D;
+    margin-top: 15px;
+    font-family: Georgia, serif;
+}
+
+@media (max-width: 700px) {
+    .videos-container {
+        grid-template-columns: 1fr;
+    }
+}
