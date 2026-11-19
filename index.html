@@ -169,83 +169,135 @@
 
         </section>
 
-        
-<!-- GALERIA -->
-<section class="galeria" id="galeria">
+        <!-- BAÚ DE SURPRESAS -->
+        <section class="bau-surpresas" id="surpresas">
 
-    <div class="titulo-secao">
+            <div class="titulo-secao">
 
-        <span>♡ Álbum de recordações ♡</span>
+                <span>♡ Uma surpresa especial ♡</span>
 
-        <h2>Um pouquinho de cada momento</h2>
+                <h2>Um tesourinho para você!</h2>
 
-        <p>
-            Cada fotografia guarda uma história.
-            Escolha um álbum e venha recordar!
-        </p>
+                <p>
+                    Existe uma lembrança especial esperando
+                    para ser descoberta...
+                </p>
 
-    </div>
+            </div>
 
-    <div class="cards">
+            <div class="bau-container">
 
-        <!-- ÁLBUM 1 -->
-        <article class="card">
+                <button class="bau-botao" id="abrirBau" type="button"
+                    aria-label="Abrir o baú de surpresas">
 
-            <img src="Blog-Imagens/galeria1.jpg.jpg"
-                alt="Uma lembrança especial do Bento">
+                    <span class="bau-luz"></span>
 
-            <h3>Momentos especiais 📸</h3>
+                    <span class="bau-tampa"></span>
 
-            <p>
-                Fotografias e lembranças
-                de momentos inesquecíveis.
-            </p>
+                    <span class="bau-corpo">
+                        <span class="bau-fechadura">✦</span>
+                    </span>
 
-            <a href="momentos.html" class="botao">
-                Ver álbum ♡
-            </a>
+                </button>
 
-        </article>
+                <p class="bau-instrucao" id="bauInstrucao">
+                    Clique no baú para descobrir sua surpresa! ♡
+                </p>
 
-        <!-- ÁLBUM 2 -->
-        <article class="card">
+                <div class="surpresa-conteudo" id="surpresaConteudo" hidden>
 
-            <img src="Blog-Imagens/momento2.jpeg.png"
-                alt="Bento em uma descoberta">
+                    <img id="fotoSurpresa" src=""
+                        alt="Lembrança especial do Bento">
 
-            <h3>Pequenas descobertas ⭐</h3>
+                    <h3 id="mensagemSurpresa"></h3>
 
-            <p>
-                Novidades, brincadeiras e
-                aventuras da infância.
-            </p>
+                    <p>
+                        Uma pequena lembrança para guardar
+                        no coração. ♡
+                    </p>
 
-            <a href="descobertas.html" class="botao">
-                Ver álbum ♡
-            </a>
+                </div>
 
-        </article>
+            </div>
 
-        <!-- ÁLBUM 3 -->
-        <article class="card">
+        </section>
 
-            <img src="Blog-Imagens/carinho1.jpeg.jpg"
-                alt="Uma lembrança cheia de carinho">
+        <!-- GALERIA -->
+        <section class="galeria" id="galeria">
 
-            <h3>Com muito carinho 🧸</h3>
+            <div class="titulo-secao">
 
-            <p>
-                Abraços, sorrisos e lembranças
-                cheias de amor.
-            </p>
+                <span>♡ Álbum de recordações ♡</span>
 
-            <a href="carinho.html" class="botao">
-                Ver álbum ♡
-            </a>
+                <h2>Um pouquinho de cada momento</h2>
 
-        </article>
+                <p>
+                    Cada fotografia guarda uma história.
+                    Escolha um álbum e venha recordar!
+                </p>
 
-    </div>
+            </div>
+
+            <div class="cards">
+
+                <!-- ÁLBUM 1 -->
+                <article class="card">
+
+                    <img src="Blog-Imagens/galeria1.jpg.jpg"
+                        alt="Uma lembrança especial do Bento">
+
+                    <h3>Momentos especiais 📸</h3>
+
+                    <p>
+                        Fotografias e lembranças
+                        de momentos inesquecíveis.
+                    </p>
+
+                    <a href="momentos.html" class="botao">
+                        Ver álbum ♡
+                    </a>
+
+                </article>
+
+                <!-- ÁLBUM 2 -->
+                <article class="card">
+
+                    <img src="Blog-Imagens/momento2.jpeg.png"
+                        alt="Bento em uma descoberta">
+
+                    <h3>Pequenas descobertas ⭐</h3>
+
+                    <p>
+                        Novidades, brincadeiras e
+                        aventuras da infância.
+                    </p>
+
+                    <a href="descobertas.html" class="botao">
+                        Ver álbum ♡
+                    </a>
+
+                </article>
+
+                <!-- ÁLBUM 3 -->
+                <article class="card">
+
+                    <img src="Blog-Imagens/carinho1.jpeg.jpg"
+                        alt="Uma lembrança cheia de carinho">
+
+                    <h3>Com muito carinho 🧸</h3>
+
+                    <p>
+                        Abraços, sorrisos e lembranças
+                        cheias de amor.
+                    </p>
+
+                    <a href="carinho.html" class="botao">
+                        Ver álbum ♡
+                    </a>
+
+                </article>
+
+            </div>
 
         </section>
 
@@ -277,6 +329,9 @@
         <span>Feito com carinho para guardar boas lembranças.</span>
 
     </footer>
+
+    <!-- JAVASCRIPT DO BAÚ -->
+    <script src="bau.js"></script>
 
 </body>
 </html>

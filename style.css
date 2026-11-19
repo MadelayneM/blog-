@@ -863,3 +863,231 @@ footer span {
         font-size: 15px;
     }
 }
+
+/* =====================================
+   BAÚ DE SURPRESAS
+===================================== */
+
+.bau-surpresas {
+    padding: 65px 20px;
+    text-align: center;
+    background: linear-gradient(
+        180deg,
+        #f6f0e5,
+        #e4edf5
+    );
+}
+
+.bau-container {
+    max-width: 650px;
+    margin: 35px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* BOTÃO DO BAÚ */
+
+.bau-botao {
+    position: relative;
+    width: 190px;
+    height: 155px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    perspective: 600px;
+    transition: transform 0.3s ease;
+}
+
+.bau-botao:hover {
+    transform: scale(1.06);
+}
+
+/* CORPO DO BAÚ */
+
+.bau-corpo {
+    position: absolute;
+    width: 180px;
+    height: 90px;
+    left: 5px;
+    bottom: 5px;
+    background: linear-gradient(
+        135deg,
+        #bd8953,
+        #87552f
+    );
+    border: 5px solid #704526;
+    border-radius: 12px 12px 20px 20px;
+    box-shadow: 0 10px 15px rgba(23, 45, 77, 0.2);
+    z-index: 2;
+}
+
+/* DETALHES DOURADOS */
+
+.bau-corpo::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    border-left: 5px solid #d8b16e;
+    border-right: 5px solid #d8b16e;
+}
+
+.bau-fechadura {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5c27d;
+    color: #704526;
+    border: 3px solid #9b713d;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+/* TAMPA */
+
+.bau-tampa {
+    position: absolute;
+    width: 180px;
+    height: 65px;
+    left: 5px;
+    top: 5px;
+    background: linear-gradient(
+        135deg,
+        #d2a16a,
+        #98643b
+    );
+    border: 5px solid #704526;
+    border-radius: 65px 65px 8px 8px;
+    transform-origin: bottom center;
+    transition: transform 0.8s ease;
+    z-index: 3;
+}
+
+/* LUZ MÁGICA */
+
+.bau-luz {
+    position: absolute;
+    width: 170px;
+    height: 120px;
+    left: 10px;
+    top: -25px;
+    background: radial-gradient(
+        ellipse,
+        rgba(255, 220, 130, 0.85),
+        rgba(255, 220, 130, 0)
+    );
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* BAÚ ABERTO */
+
+.bau-botao.aberto .bau-tampa {
+    transform: rotateX(115deg);
+}
+
+.bau-botao.aberto .bau-luz {
+    opacity: 1;
+    animation: brilho-bau 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes brilho-bau {
+    from {
+        opacity: 0.4;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* INSTRUÇÃO */
+
+.bau-instrucao {
+    color: #42658b;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+/* SURPRESA REVELADA */
+
+.surpresa-conteudo {
+    max-width: 350px;
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px;
+    background-color: #fffdf8;
+    border: 1px solid #d9c8ad;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(23, 45, 77, 0.13);
+    animation: surgir-surpresa 0.8s ease both;
+}
+
+.surpresa-conteudo[hidden] {
+    display: none;
+}
+
+.surpresa-conteudo img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 7px;
+    display: block;
+}
+
+.surpresa-conteudo h3 {
+    color: #172d4d;
+    margin-top: 18px;
+    font-size: 21px;
+}
+
+.surpresa-conteudo p {
+    color: #71839a;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+@keyframes surgir-surpresa {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+    .bau-surpresas {
+        padding: 45px 18px;
+    }
+
+    .bau-botao {
+        transform: scale(0.9);
+    }
+
+    .bau-botao:hover {
+        transform: scale(0.95);
+    }
+
+    .surpresa-conteudo img {
+        height: 230px;
+    }
+}
