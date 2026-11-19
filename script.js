@@ -185,3 +185,69 @@ botoesFiltro.forEach((botao) => {
     });
 
 });
+// =====================================
+// CARROSSEL DE FOTOGRAFIAS
+// =====================================
+
+const carrossel = document.querySelector("#carrosselFotos");
+const botaoFotoAnterior = document.querySelector("#anteriorFoto");
+const botaoFotoProxima = document.querySelector("#proximaFoto");
+
+if (carrossel && botaoFotoAnterior && botaoFotoProxima) {
+
+    const cardsCarrossel = carrossel.querySelectorAll(".card");
+
+    let posicaoCarrossel = 0;
+
+    function quantidadeVisivel() {
+        return window.innerWidth <= 700 ? 1 : 3;
+    }
+
+    function atualizarCarrossel() {
+
+        const visiveis = quantidadeVisivel();
+
+        const limite = Math.max(0, cardsCarrossel.length - visiveis);
+
+        posicaoCarrossel = Math.min(posicaoCarrossel, limite);
+
+        const card = cardsCarrossel[0];
+
+        if (!card) return;
+
+        const larguraCard = card.getBoundingClientRect().width;
+        const espaco = 25;
+
+        carrossel.style.transform =
+            `translateX(-${posicaoCarrossel * (larguraCard + espaco)}px)`;
+    }
+
+    botaoFotoAnterior.addEventListener("click", () => {
+
+        const visiveis = quantidadeVisivel();
+
+        if (posicaoCarrossel > 0) {
+            posicaoCarrossel--;
+            atualizarCarrossel();
+        }
+
+    });
+
+    botaoFotoProxima.addEventListener("click", () => {
+
+        const limite = Math.max(
+            0,
+            cardsCarrossel.length - quantidadeVisivel()
+        );
+
+        if (posicaoCarrossel < limite) {
+            posicaoCarrossel++;
+            atualizarCarrossel();
+        }
+
+    });
+
+    window.addEventListener("resize", atualizarCarrossel);
+
+    atualizarCarrossel();
+}
